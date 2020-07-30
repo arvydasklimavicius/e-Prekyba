@@ -1,0 +1,343 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */; };
+		CE2D6AF424D2EB3D0018E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */; };
+		CE2D6AF624D2EB3D0018E1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF524D2EB3D0018E1BD /* ViewController.swift */; };
+		CE2D6AF924D2EB3D0018E1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */; };
+		CE2D6AFB24D2EB3F0018E1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */; };
+		CE2D6AFE24D2EB3F0018E1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AFC24D2EB3F0018E1BD /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CE2D6AEE24D2EB3D0018E1BD /* e-Prekyba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Prekyba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE2D6AF524D2EB3D0018E1BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE2D6AF824D2EB3D0018E1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CE2D6AFD24D2EB3F0018E1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CE2D6AFF24D2EB3F0018E1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CE2D6AEB24D2EB3D0018E1BD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CE2D6AE524D2EB3D0018E1BD = {
+			isa = PBXGroup;
+			children = (
+				CE2D6AF024D2EB3D0018E1BD /* e-Prekyba */,
+				CE2D6AEF24D2EB3D0018E1BD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CE2D6AEF24D2EB3D0018E1BD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CE2D6AEE24D2EB3D0018E1BD /* e-Prekyba.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CE2D6AF024D2EB3D0018E1BD /* e-Prekyba */ = {
+			isa = PBXGroup;
+			children = (
+				CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */,
+				CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */,
+				CE2D6AF524D2EB3D0018E1BD /* ViewController.swift */,
+				CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */,
+				CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */,
+				CE2D6AFC24D2EB3F0018E1BD /* LaunchScreen.storyboard */,
+				CE2D6AFF24D2EB3F0018E1BD /* Info.plist */,
+			);
+			path = "e-Prekyba";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CE2D6AED24D2EB3D0018E1BD /* e-Prekyba */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CE2D6B0224D2EB3F0018E1BD /* Build configuration list for PBXNativeTarget "e-Prekyba" */;
+			buildPhases = (
+				CE2D6AEA24D2EB3D0018E1BD /* Sources */,
+				CE2D6AEB24D2EB3D0018E1BD /* Frameworks */,
+				CE2D6AEC24D2EB3D0018E1BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "e-Prekyba";
+			productName = "e-Prekyba";
+			productReference = CE2D6AEE24D2EB3D0018E1BD /* e-Prekyba.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CE2D6AE624D2EB3D0018E1BD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Arvydas Klimavicius";
+				TargetAttributes = {
+					CE2D6AED24D2EB3D0018E1BD = {
+						CreatedOnToolsVersion = 11.6;
+					};
+				};
+			};
+			buildConfigurationList = CE2D6AE924D2EB3D0018E1BD /* Build configuration list for PBXProject "e-Prekyba" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CE2D6AE524D2EB3D0018E1BD;
+			productRefGroup = CE2D6AEF24D2EB3D0018E1BD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CE2D6AED24D2EB3D0018E1BD /* e-Prekyba */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CE2D6AEC24D2EB3D0018E1BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2D6AFE24D2EB3F0018E1BD /* LaunchScreen.storyboard in Resources */,
+				CE2D6AFB24D2EB3F0018E1BD /* Assets.xcassets in Resources */,
+				CE2D6AF924D2EB3D0018E1BD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE2D6AEA24D2EB3D0018E1BD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE2D6AF624D2EB3D0018E1BD /* ViewController.swift in Sources */,
+				CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */,
+				CE2D6AF424D2EB3D0018E1BD /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE2D6AF824D2EB3D0018E1BD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CE2D6AFC24D2EB3F0018E1BD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE2D6AFD24D2EB3F0018E1BD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CE2D6B0024D2EB3F0018E1BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CE2D6B0124D2EB3F0018E1BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CE2D6B0324D2EB3F0018E1BD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ER798Q6G9;
+				INFOPLIST_FILE = "e-Prekyba/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.e-Prekyba";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CE2D6B0424D2EB3F0018E1BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3ER798Q6G9;
+				INFOPLIST_FILE = "e-Prekyba/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "AK.e-Prekyba";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CE2D6AE924D2EB3D0018E1BD /* Build configuration list for PBXProject "e-Prekyba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2D6B0024D2EB3F0018E1BD /* Debug */,
+				CE2D6B0124D2EB3F0018E1BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CE2D6B0224D2EB3F0018E1BD /* Build configuration list for PBXNativeTarget "e-Prekyba" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CE2D6B0324D2EB3F0018E1BD /* Debug */,
+				CE2D6B0424D2EB3F0018E1BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CE2D6AE624D2EB3D0018E1BD /* Project object */;
+}
