@@ -7,3 +7,29 @@
 //
 
 import Foundation
+
+//MARK: Category
+
+public let cNAME = "name"
+public let cIMAGENAME = "imageName"
+public let cOBJECTID = "objectId"
+
+//MARK: Firebase Headers
+
+public let cUSER_PATH = "User"
+public let cCATEGORY_PATH = "Category"
+public let cITEMS_PATH = "Items"
+public let cBASKET_PATH = "Basket"
+
+//MARK: Item
+public let cCATEGORYID = "categoryId"
+public let cDESCRIPTION = "description"
+public let cPRICE = "price"
+public let cIMAGELINKS = "imageLinks"
+
+
+
+
+
+
+

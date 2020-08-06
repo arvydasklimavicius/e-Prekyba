@@ -9,9 +9,12 @@
 import UIKit
 
 class ItemsTVC: UITableViewController {
+    
+    var category: Category?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -77,14 +80,16 @@ class ItemsTVC: UITableViewController {
     }
     */
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+     //MARK: - Navigation
+
+     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "fromItemToAddItem" {
+            let vc = segue.destination as! AddItemVC
+            vc.category = category!
+        }
     }
-    */
+
 
 }

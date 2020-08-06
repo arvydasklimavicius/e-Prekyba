@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */; };
 		CE2D6AF424D2EB3D0018E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */; };
-		CE2D6AF624D2EB3D0018E1BD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF524D2EB3D0018E1BD /* ViewController.swift */; };
 		CE2D6AF924D2EB3D0018E1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */; };
 		CE2D6AFB24D2EB3F0018E1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */; };
 		CE2D6AFE24D2EB3F0018E1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AFC24D2EB3F0018E1BD /* LaunchScreen.storyboard */; };
+		CE66171324D306A8009F0455 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */; };
+		CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */; };
+		CE66171724D309FF009F0455 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE66171624D309FF009F0455 /* GoogleService-Info.plist */; };
+		CE66171924D321EE009F0455 /* FirebaseCollectionRefference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171824D321EE009F0455 /* FirebaseCollectionRefference.swift */; };
+		CE66171E24D32597009F0455 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171D24D32597009F0455 /* Category.swift */; };
+		CE66172124D32ABA009F0455 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66172024D32ABA009F0455 /* Constants.swift */; };
+		CE66172324D99D19009F0455 /* ItemsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66172224D99D19009F0455 /* ItemsTVC.swift */; };
+		CE66172524D9A04E009F0455 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66172424D9A04E009F0455 /* Item.swift */; };
+		CE66172724D9B730009F0455 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66172624D9B730009F0455 /* AddItemVC.swift */; };
+		CF25F4603028D863EE21FBC4 /* Pods_e_Prekyba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32518A5F046487FCB833F1 /* Pods_e_Prekyba.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18CF7E12840F568C2CF7D8A3 /* Pods-e-Prekyba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Prekyba.debug.xcconfig"; path = "Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2D6AEE24D2EB3D0018E1BD /* e-Prekyba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Prekyba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE2D6AF524D2EB3D0018E1BD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CE2D6AF824D2EB3D0018E1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2D6AFD24D2EB3F0018E1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2D6AFF24D2EB3F0018E1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		CE66171624D309FF009F0455 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		CE66171824D321EE009F0455 /* FirebaseCollectionRefference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionRefference.swift; sourceTree = "<group>"; };
+		CE66171D24D32597009F0455 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		CE66172024D32ABA009F0455 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CE66172224D99D19009F0455 /* ItemsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsTVC.swift; sourceTree = "<group>"; };
+		CE66172424D9A04E009F0455 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		CE66172624D9B730009F0455 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
+		EA9676FEE70E434483A65B1B /* Pods-e-Prekyba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Prekyba.release.xcconfig"; path = "Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba.release.xcconfig"; sourceTree = "<group>"; };
+		EE32518A5F046487FCB833F1 /* Pods_e_Prekyba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_Prekyba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF25F4603028D863EE21FBC4 /* Pods_e_Prekyba.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		740F86440A7000006A74A25F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE32518A5F046487FCB833F1 /* Pods_e_Prekyba.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C32D12301FB59F9D3BD845E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				18CF7E12840F568C2CF7D8A3 /* Pods-e-Prekyba.debug.xcconfig */,
+				EA9676FEE70E434483A65B1B /* Pods-e-Prekyba.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		CE2D6AE524D2EB3D0018E1BD = {
 			isa = PBXGroup;
 			children = (
 				CE2D6AF024D2EB3D0018E1BD /* e-Prekyba */,
 				CE2D6AEF24D2EB3D0018E1BD /* Products */,
+				C32D12301FB59F9D3BD845E7 /* Pods */,
+				740F86440A7000006A74A25F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +96,55 @@
 		CE2D6AF024D2EB3D0018E1BD /* e-Prekyba */ = {
 			isa = PBXGroup;
 			children = (
+				CE66171C24D32510009F0455 /* Model */,
+				CE66171B24D324FE009F0455 /* View */,
+				CE66171A24D324F1009F0455 /* Controller */,
+				CE66171F24D32AA2009F0455 /* Helpers */,
 				CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */,
 				CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */,
-				CE2D6AF524D2EB3D0018E1BD /* ViewController.swift */,
 				CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */,
 				CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */,
 				CE2D6AFC24D2EB3F0018E1BD /* LaunchScreen.storyboard */,
 				CE2D6AFF24D2EB3F0018E1BD /* Info.plist */,
+				CE66171624D309FF009F0455 /* GoogleService-Info.plist */,
 			);
 			path = "e-Prekyba";
+			sourceTree = "<group>";
+		};
+		CE66171A24D324F1009F0455 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		CE66171B24D324FE009F0455 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */,
+				CE66172224D99D19009F0455 /* ItemsTVC.swift */,
+				CE66172624D9B730009F0455 /* AddItemVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CE66171C24D32510009F0455 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CE66171824D321EE009F0455 /* FirebaseCollectionRefference.swift */,
+				CE66171D24D32597009F0455 /* Category.swift */,
+				CE66172424D9A04E009F0455 /* Item.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		CE66171F24D32AA2009F0455 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				CE66172024D32ABA009F0455 /* Constants.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +154,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CE2D6B0224D2EB3F0018E1BD /* Build configuration list for PBXNativeTarget "e-Prekyba" */;
 			buildPhases = (
+				038679425C4DFE6AB3F1D6C8 /* [CP] Check Pods Manifest.lock */,
 				CE2D6AEA24D2EB3D0018E1BD /* Sources */,
 				CE2D6AEB24D2EB3D0018E1BD /* Frameworks */,
 				CE2D6AEC24D2EB3D0018E1BD /* Resources */,
+				2B5FCD688241E161977BA74D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,6 +208,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2D6AFE24D2EB3F0018E1BD /* LaunchScreen.storyboard in Resources */,
+				CE66171724D309FF009F0455 /* GoogleService-Info.plist in Resources */,
 				CE2D6AFB24D2EB3F0018E1BD /* Assets.xcassets in Resources */,
 				CE2D6AF924D2EB3D0018E1BD /* Main.storyboard in Resources */,
 			);
@@ -133,14 +216,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		038679425C4DFE6AB3F1D6C8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-e-Prekyba-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2B5FCD688241E161977BA74D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		CE2D6AEA24D2EB3D0018E1BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE2D6AF624D2EB3D0018E1BD /* ViewController.swift in Sources */,
+				CE66172324D99D19009F0455 /* ItemsTVC.swift in Sources */,
+				CE66172524D9A04E009F0455 /* Item.swift in Sources */,
+				CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */,
+				CE66171E24D32597009F0455 /* Category.swift in Sources */,
 				CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */,
+				CE66172724D9B730009F0455 /* AddItemVC.swift in Sources */,
 				CE2D6AF424D2EB3D0018E1BD /* SceneDelegate.swift in Sources */,
+				CE66172124D32ABA009F0455 /* Constants.swift in Sources */,
+				CE66171924D321EE009F0455 /* FirebaseCollectionRefference.swift in Sources */,
+				CE66171324D306A8009F0455 /* CategoryCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +414,7 @@
 		};
 		CE2D6B0324D2EB3F0018E1BD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18CF7E12840F568C2CF7D8A3 /* Pods-e-Prekyba.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +433,7 @@
 		};
 		CE2D6B0424D2EB3F0018E1BD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EA9676FEE70E434483A65B1B /* Pods-e-Prekyba.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
