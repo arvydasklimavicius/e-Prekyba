@@ -8,6 +8,9 @@
 
 import Foundation
 
+//MARK: - ID's and Keys
+public let cFILEREFERENCE = "gs://e-prekyba-d6460.appspot.com"
+
 //MARK: Category
 
 public let cNAME = "name"
