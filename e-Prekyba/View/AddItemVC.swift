@@ -25,10 +25,22 @@ class AddItemVC: UIViewController {
     let hud = JGProgressHUD(style: .dark)
     var activityIndicator: NVActivityIndicatorView?
     
+    
+    //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.frame.width / 2 - 30,
+                                                                  y: self.view.frame.height / 2 - 30,
+                                                                  width: 60,
+                                                                  height: 60),
+                                                    type: .ballGridPulse,
+                                                    color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),
+                                                    padding: nil)
     }
     
     //MARK: - Actions
@@ -65,7 +77,8 @@ class AddItemVC: UIViewController {
     
     //MARK: - Save item to Firebase
     private func saveItemToFirebase() {
-
+        
+        showActivityIndicator()
         let item = Item()
         item.id = UUID().uuidString
         item.name = titleTxtField.text!
@@ -77,6 +90,7 @@ class AddItemVC: UIViewController {
             uploadImages(images: itemImages, itemId: item.id) { (imageLinkArray) in
                 item.imageLinks = imageLinkArray
                 saveItemToFirestore(item)
+                self.hideActivityIndicator()
                 self.popTheView()
             }
         } else {
@@ -85,6 +99,25 @@ class AddItemVC: UIViewController {
         }
 
     }
+    
+    //MARK: - Activity Indicator
+    
+    private func showActivityIndicator() {
+        if activityIndicator != nil {
+            self.view.addSubview(activityIndicator!)
+            activityIndicator?.startAnimating()
+        }
+    }
+    
+    private func hideActivityIndicator() {
+        if activityIndicator != nil {
+            activityIndicator!.removeFromSuperview()
+            activityIndicator!.stopAnimating()
+        }
+    }
+    
+    
+    //MARK: - Show Images Gallery
     
     private func showImageGallery() {
         self.gallery = GalleryController()
