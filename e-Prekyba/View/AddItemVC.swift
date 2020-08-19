@@ -38,8 +38,8 @@ class AddItemVC: UIViewController {
                                                                   y: self.view.frame.height / 2 - 30,
                                                                   width: 60,
                                                                   height: 60),
-                                                    type: .ballGridPulse,
-                                                    color: #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1),
+                                                    type: .circleStrokeSpin,
+                                                    color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
                                                     padding: nil)
     }
     
@@ -50,7 +50,10 @@ class AddItemVC: UIViewController {
         if checkFieldsAreFilled() {
             saveItemToFirebase()
         } else {
-            print("Error, show to user")
+            self.hud.textLabel.text = "All fields are required!"
+            self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            self.hud.show(in: view)
+            self.hud.dismiss(afterDelay: 2.0)
         }
     }
     @IBAction func cameraBtnTapped(_ sender: Any) {
