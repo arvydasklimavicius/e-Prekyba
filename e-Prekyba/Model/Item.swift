@@ -36,7 +36,7 @@ class Item {
 
 func saveItemToFirestore (_ item: Item) {
      
-    FirebaseReferrence(.Items).document(item.id).setData(itemDictionaryFrom(item) as! [String : Any])
+    FirebaseReferrence(.Item).document(item.id).setData(itemDictionaryFrom(item) as! [String : Any])
 }
 
 //MARK: Item from Firebase
@@ -61,7 +61,7 @@ func itemDictionaryFrom(_ item: Item) -> NSDictionary{
 //MARK: - Download Item from firebase
 func downloadItem(_ withCategoryId: String, completion: @escaping (_ itemArray: [Item]) -> ()) {
     var itemArray: [Item] = []
-    FirebaseReferrence(.Items).whereField(cCATEGORYID, isEqualTo: withCategoryId).getDocuments { (snapshot, error) in
+    FirebaseReferrence(.Item).whereField(cCATEGORYID, isEqualTo: withCategoryId).getDocuments { (snapshot, error) in
         guard let snapshot = snapshot else {
             completion(itemArray)
             return

@@ -23,6 +23,7 @@
 		CE66172724D9B730009F0455 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66172624D9B730009F0455 /* AddItemVC.swift */; };
 		CE7D3CFC24EC173000CDACF4 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D3CFB24EC173000CDACF4 /* Reachability.swift */; };
 		CE7D3CFE24EC184C00CDACF4 /* Downloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D3CFD24EC184C00CDACF4 /* Downloader.swift */; };
+		CE7D3D0024EEAD6400CDACF4 /* ItemTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7D3CFF24EEAD6400CDACF4 /* ItemTVCell.swift */; };
 		CF25F4603028D863EE21FBC4 /* Pods_e_Prekyba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE32518A5F046487FCB833F1 /* Pods_e_Prekyba.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,7 @@
 		CE66172624D9B730009F0455 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 		CE7D3CFB24EC173000CDACF4 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		CE7D3CFD24EC184C00CDACF4 /* Downloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Downloader.swift; sourceTree = "<group>"; };
+		CE7D3CFF24EEAD6400CDACF4 /* ItemTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemTVCell.swift; sourceTree = "<group>"; };
 		EA9676FEE70E434483A65B1B /* Pods-e-Prekyba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Prekyba.release.xcconfig"; path = "Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba.release.xcconfig"; sourceTree = "<group>"; };
 		EE32518A5F046487FCB833F1 /* Pods_e_Prekyba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_e_Prekyba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */,
+				CE7D3CFF24EEAD6400CDACF4 /* ItemTVCell.swift */,
 				CE66172224D99D19009F0455 /* ItemsTVC.swift */,
 				CE66172624D9B730009F0455 /* AddItemVC.swift */,
 			);
@@ -275,6 +278,7 @@
 				CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */,
 				CE66171E24D32597009F0455 /* Category.swift in Sources */,
 				CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */,
+				CE7D3D0024EEAD6400CDACF4 /* ItemTVCell.swift in Sources */,
 				CE66172724D9B730009F0455 /* AddItemVC.swift in Sources */,
 				CE2D6AF424D2EB3D0018E1BD /* SceneDelegate.swift in Sources */,
 				CE7D3CFC24EC173000CDACF4 /* Reachability.swift in Sources */,

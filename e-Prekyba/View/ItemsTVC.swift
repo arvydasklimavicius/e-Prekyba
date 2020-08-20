@@ -39,7 +39,8 @@ class ItemsTVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ItemTVCell
+        cell.configureItemCell(itemArray[indexPath.row])
         return cell
     }
 
@@ -55,7 +56,10 @@ class ItemsTVC: UITableViewController {
     }
     
     private func loadItems() {
-        
+        downloadItem(category!.id) { (allItems) in
+            self.itemArray = allItems
+            self.tableView.reloadData()
+        }
     }
 
 

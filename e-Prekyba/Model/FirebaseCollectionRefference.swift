@@ -12,7 +12,7 @@ import FirebaseFirestore
 enum FCollectionReferrence: String {
     case User
     case Category
-    case Items
+    case Item
     case Basket
 }
 
