@@ -62,3 +62,27 @@ func saveImagesToFirestore(imageData: Data, fileName: String, completion: @escap
         }
     })
 }
+
+func downloadImages(imageUrls: [String], completion: @escaping (_ images: [UIImage?]) -> ()) {
+    var imagesArray: [UIImage] = []
+    var downloadCounter = 0
+    for link in imageUrls {
+        let url = NSURL(string: link)
+        let downloadQueue = DispatchQueue(label: "imageDownloadQueue")
+        downloadQueue.async {
+            downloadCounter += 1
+            let data = NSData(contentsOf: url! as URL)
+            if data != nil {
+                imagesArray.append(UIImage(data: data! as Data)!)
+                if downloadCounter == imagesArray.count {
+                    DispatchQueue.main.async {
+                        completion(imagesArray)
+                    }
+                }
+            } else {
+                print("error downloading image")
+                completion(imagesArray)
+            }
+        }
+    }
+}

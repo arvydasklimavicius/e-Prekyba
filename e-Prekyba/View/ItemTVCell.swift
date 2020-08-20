@@ -29,9 +29,14 @@ class ItemTVCell: UITableViewCell {
     func configureItemCell(_ item: Item) {
         titleLabel.text = item.name
         descriptionLabel.text = item.description
-        priceLabel.text = "\(item.price!)"
+        priceLabel.text = convertToCurrency(item.price)
         
-        //TODO: Download image
+        //Checking for images to download
+        if item.imageLinks != nil && item.imageLinks.count > 0 {
+            downloadImages(imageUrls: [item.imageLinks.first!]) { (images) in
+                self.productImageView.image = images.first as? UIImage
+            }
+        }
     }
 
 }

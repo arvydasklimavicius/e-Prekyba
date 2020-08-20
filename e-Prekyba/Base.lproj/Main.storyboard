@@ -104,7 +104,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lacoste" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-UU-UHc">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery_empty_view_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-UU-UHc">
                                             <rect key="frame" x="14" y="4" width="100" height="112"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="ENM-V6-ogb"/>
@@ -144,7 +144,7 @@
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="4z0-o1-w65" secondAttribute="trailing" constant="20" symbolic="YES" id="NH0-46-qdU"/>
                                         <constraint firstItem="r6y-UU-UHc" firstAttribute="top" secondItem="kzr-bT-bzf" secondAttribute="top" constant="4" id="S3Z-Lr-prg"/>
                                         <constraint firstItem="4z0-o1-w65" firstAttribute="leading" secondItem="r6y-UU-UHc" secondAttribute="trailing" constant="8" id="Vkh-19-0q5"/>
-                                        <constraint firstItem="Pat-sg-ja9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r6y-UU-UHc" secondAttribute="trailing" symbolic="YES" id="VtC-Ml-bR1"/>
+                                        <constraint firstItem="Pat-sg-ja9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r6y-UU-UHc" secondAttribute="trailing" constant="8" symbolic="YES" id="VtC-Ml-bR1"/>
                                         <constraint firstAttribute="bottomMargin" secondItem="Pat-sg-ja9" secondAttribute="bottom" constant="12" id="ctj-W1-9Gk"/>
                                         <constraint firstItem="UAK-B6-Ssj" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r6y-UU-UHc" secondAttribute="trailing" constant="8" symbolic="YES" id="geP-zb-CXG"/>
                                         <constraint firstAttribute="bottom" secondItem="r6y-UU-UHc" secondAttribute="bottom" constant="4" id="joN-dt-Xqr"/>
@@ -311,7 +311,6 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="gallery_empty_view_image.png" width="72" height="49"/>
-        <image name="lacoste" width="333.33334350585938" height="333.33334350585938"/>
         <image name="square.grid.3x2" catalog="system" width="128" height="80"/>
     </resources>
 </document>
