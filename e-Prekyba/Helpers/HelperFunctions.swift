@@ -13,7 +13,7 @@ func convertToCurrency(_ number: Double) -> String {
     currencyFormatter.usesGroupingSeparator = true
     currencyFormatter.numberStyle = .currency
     //currencyFormatter.locale = Locale.current
-    currencyFormatter.currencySymbol = .init(stringLiteral: "€ ")
+    currencyFormatter.currencySymbol = .init(stringLiteral: "€")
     
     let priceString = currencyFormatter.string(from: NSNumber(value: number))!
     return priceString

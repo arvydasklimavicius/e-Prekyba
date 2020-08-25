@@ -25,11 +25,33 @@ class ItemVC: UIViewController {
     //MARK: - ViewLifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupUI()
         
     }
     
     
+    //MARK: - Setup UI
+    private func setupUI() {
+        if item != nil {
+            self.title = item.name
+            nameLbl.text = item.name
+            priceLbl.text = convertToCurrency(item.price)
+            descriptionTxtView.text = item.description
+        }
+    }
+    
     
 
+}
+
+extension ItemVC: UICollectionViewDelegate, UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        return UICollectionViewCell()
+    }
+    
+    
 }

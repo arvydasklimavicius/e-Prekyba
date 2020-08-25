@@ -217,7 +217,7 @@
                                     <constraint firstAttribute="height" constant="50" id="dqn-SA-sed"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="39"/>
-                                <color key="tintColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" image="camera.fill" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="26" scale="large" weight="bold"/>
                                 </state>
@@ -243,6 +243,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add Item" id="GXL-79-JYt">
                         <barButtonItem key="rightBarButtonItem" systemItem="done" id="OEx-06-Gue">
+                            <color key="tintColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <action selector="doneBtnTapped:" destination="Slw-zt-exH" id="8ID-3m-09P"/>
                             </connections>
@@ -266,7 +267,7 @@
         <!--ItemVC-->
         <scene sceneID="bSc-Zt-NRn">
             <objects>
-                <viewController id="I63-gt-CPn" customClass="ItemVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="itemView" id="I63-gt-CPn" customClass="ItemVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gi7-c4-bxE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -277,23 +278,38 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="ugZ-t6-9cG"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FpP-Fj-NVb">
-                                    <size key="itemSize" width="199" height="202"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FpP-Fj-NVb">
+                                    <size key="itemSize" width="409" height="200"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hzV-U5-UXG">
-                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ItemImagesCell" id="hzV-U5-UXG" customClass="ImageCollectionViewCell" customModule="e_Prekyba" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="409" height="200"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WP6-fW-fmb">
-                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="409" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cha-od-Pjc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="409" height="200"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="cha-od-Pjc" secondAttribute="bottom" id="MT8-3n-D4S"/>
+                                                <constraint firstItem="cha-od-Pjc" firstAttribute="top" secondItem="WP6-fW-fmb" secondAttribute="top" id="MpT-E0-hqC"/>
+                                                <constraint firstItem="cha-od-Pjc" firstAttribute="leading" secondItem="WP6-fW-fmb" secondAttribute="leading" id="O1v-40-y5q"/>
+                                                <constraint firstAttribute="trailing" secondItem="cha-od-Pjc" secondAttribute="trailing" id="bWq-zk-jdb"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="200" height="200"/>
+                                        <size key="customSize" width="409" height="200"/>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="I63-gt-CPn" id="n8m-a3-wM6"/>
+                                    <outlet property="delegate" destination="I63-gt-CPn" id="EO0-cZ-B7t"/>
+                                </connections>
                             </collectionView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YZ4-ju-C5O">
                                 <rect key="frame" x="8" y="256" width="398" height="93.5"/>
@@ -305,23 +321,26 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JJZ-zB-7PM">
-                                        <rect key="frame" x="0.0" y="35.5" width="95.5" height="25"/>
+                                        <rect key="frame" x="0.0" y="35.5" width="100" height="25"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBK-mO-iPG">
-                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="25"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="B3f-2Q-eln"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL5-eo-0ds">
-                                                <rect key="frame" x="53.5" y="0.0" width="42" height="25"/>
+                                                <rect key="frame" x="58" y="0.0" width="42" height="25"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zX-CG-S7i">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zX-CG-S7i">
                                         <rect key="frame" x="0.0" y="68.5" width="398" height="25"/>
                                         <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
                                         <nil key="textColor"/>
@@ -336,8 +355,8 @@
                                 </constraints>
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oD0-js-Fdb">
-                                <rect key="frame" x="8" y="357.5" width="398" height="504.5"/>
-                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="8" y="357.5" width="398" height="440.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -345,13 +364,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="oD0-js-Fdb" firstAttribute="leading" secondItem="avu-NA-CuU" secondAttribute="leading" constant="8" id="1DN-Kk-1CE"/>
+                            <constraint firstItem="avu-NA-CuU" firstAttribute="trailing" secondItem="oD0-js-Fdb" secondAttribute="trailing" constant="8" id="3pz-jH-hxs"/>
                             <constraint firstItem="PEf-E1-GoV" firstAttribute="leading" secondItem="avu-NA-CuU" secondAttribute="leading" id="Bb8-pe-X3i"/>
-                            <constraint firstItem="avu-NA-CuU" firstAttribute="trailing" secondItem="oD0-js-Fdb" secondAttribute="trailing" constant="8" id="FtU-ue-bbE"/>
+                            <constraint firstItem="oD0-js-Fdb" firstAttribute="top" secondItem="YZ4-ju-C5O" secondAttribute="bottom" constant="8" id="RfF-r4-uWz"/>
                             <constraint firstItem="YZ4-ju-C5O" firstAttribute="leading" secondItem="avu-NA-CuU" secondAttribute="leading" constant="8" id="VCC-rI-ZOQ"/>
+                            <constraint firstAttribute="bottom" secondItem="oD0-js-Fdb" secondAttribute="bottom" constant="98" id="WET-iU-Dqv"/>
                             <constraint firstItem="avu-NA-CuU" firstAttribute="trailing" secondItem="YZ4-ju-C5O" secondAttribute="trailing" constant="8" id="Wb5-sq-aB3"/>
-                            <constraint firstItem="oD0-js-Fdb" firstAttribute="top" secondItem="YZ4-ju-C5O" secondAttribute="bottom" constant="8" id="Xo5-I9-vAI"/>
-                            <constraint firstItem="oD0-js-Fdb" firstAttribute="bottom" secondItem="avu-NA-CuU" secondAttribute="bottom" id="mbf-Fr-Y7A"/>
+                            <constraint firstItem="oD0-js-Fdb" firstAttribute="leading" secondItem="avu-NA-CuU" secondAttribute="leading" constant="8" id="fBI-Lv-rqJ"/>
                             <constraint firstItem="PEf-E1-GoV" firstAttribute="trailing" secondItem="avu-NA-CuU" secondAttribute="trailing" id="rF5-3X-hVW"/>
                             <constraint firstItem="PEf-E1-GoV" firstAttribute="top" secondItem="avu-NA-CuU" secondAttribute="top" id="tUG-g4-TCP"/>
                             <constraint firstItem="YZ4-ju-C5O" firstAttribute="top" secondItem="PEf-E1-GoV" secondAttribute="bottom" constant="12" id="uMQ-MH-a2C"/>
