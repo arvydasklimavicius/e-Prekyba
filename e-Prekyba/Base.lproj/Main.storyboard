@@ -104,7 +104,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="383" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery_empty_view_image.png" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-UU-UHc">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gallery_placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="r6y-UU-UHc">
                                             <rect key="frame" x="14" y="4" width="100" height="112"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="100" id="ENM-V6-ogb"/>
@@ -154,6 +154,7 @@
                                         <constraint firstItem="Pat-sg-ja9" firstAttribute="top" secondItem="4z0-o1-w65" secondAttribute="bottom" constant="4" id="tAp-ZY-c6K"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <connections>
                                     <outlet property="descriptionLabel" destination="Pat-sg-ja9" id="sS1-DW-rJn"/>
                                     <outlet property="priceLabel" destination="UAK-B6-Ssj" id="TRT-Ka-9Pr"/>
@@ -262,6 +263,112 @@
             </objects>
             <point key="canvasLocation" x="4365" y="-234"/>
         </scene>
+        <!--ItemVC-->
+        <scene sceneID="bSc-Zt-NRn">
+            <objects>
+                <viewController id="I63-gt-CPn" customClass="ItemVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gi7-c4-bxE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PEf-E1-GoV">
+                                <rect key="frame" x="0.0" y="44" width="414" height="200"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="ugZ-t6-9cG"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="FpP-Fj-NVb">
+                                    <size key="itemSize" width="199" height="202"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="hzV-U5-UXG">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WP6-fW-fmb">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="200" height="200"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="YZ4-ju-C5O">
+                                <rect key="frame" x="8" y="256" width="398" height="93.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oil-xy-znk">
+                                        <rect key="frame" x="0.0" y="0.0" width="398" height="27.5"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JJZ-zB-7PM">
+                                        <rect key="frame" x="0.0" y="35.5" width="95.5" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBK-mO-iPG">
+                                                <rect key="frame" x="0.0" y="0.0" width="45.5" height="25"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL5-eo-0ds">
+                                                <rect key="frame" x="53.5" y="0.0" width="42" height="25"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9zX-CG-S7i">
+                                        <rect key="frame" x="0.0" y="68.5" width="398" height="25"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9zX-CG-S7i" secondAttribute="trailing" id="I54-0D-Xal"/>
+                                    <constraint firstItem="9zX-CG-S7i" firstAttribute="leading" secondItem="YZ4-ju-C5O" secondAttribute="leading" id="RS8-Xh-Lq6"/>
+                                    <constraint firstAttribute="trailing" secondItem="oil-xy-znk" secondAttribute="trailing" id="SLh-qo-Srs"/>
+                                    <constraint firstItem="oil-xy-znk" firstAttribute="leading" secondItem="YZ4-ju-C5O" secondAttribute="leading" id="qBg-uK-FHg"/>
+                                </constraints>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="oD0-js-Fdb">
+                                <rect key="frame" x="8" y="357.5" width="398" height="504.5"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oD0-js-Fdb" firstAttribute="leading" secondItem="avu-NA-CuU" secondAttribute="leading" constant="8" id="1DN-Kk-1CE"/>
+                            <constraint firstItem="PEf-E1-GoV" firstAttribute="leading" secondItem="avu-NA-CuU" secondAttribute="leading" id="Bb8-pe-X3i"/>
+                            <constraint firstItem="avu-NA-CuU" firstAttribute="trailing" secondItem="oD0-js-Fdb" secondAttribute="trailing" constant="8" id="FtU-ue-bbE"/>
+                            <constraint firstItem="YZ4-ju-C5O" firstAttribute="leading" secondItem="avu-NA-CuU" secondAttribute="leading" constant="8" id="VCC-rI-ZOQ"/>
+                            <constraint firstItem="avu-NA-CuU" firstAttribute="trailing" secondItem="YZ4-ju-C5O" secondAttribute="trailing" constant="8" id="Wb5-sq-aB3"/>
+                            <constraint firstItem="oD0-js-Fdb" firstAttribute="top" secondItem="YZ4-ju-C5O" secondAttribute="bottom" constant="8" id="Xo5-I9-vAI"/>
+                            <constraint firstItem="oD0-js-Fdb" firstAttribute="bottom" secondItem="avu-NA-CuU" secondAttribute="bottom" id="mbf-Fr-Y7A"/>
+                            <constraint firstItem="PEf-E1-GoV" firstAttribute="trailing" secondItem="avu-NA-CuU" secondAttribute="trailing" id="rF5-3X-hVW"/>
+                            <constraint firstItem="PEf-E1-GoV" firstAttribute="top" secondItem="avu-NA-CuU" secondAttribute="top" id="tUG-g4-TCP"/>
+                            <constraint firstItem="YZ4-ju-C5O" firstAttribute="top" secondItem="PEf-E1-GoV" secondAttribute="bottom" constant="12" id="uMQ-MH-a2C"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="avu-NA-CuU"/>
+                    </view>
+                    <connections>
+                        <outlet property="descriptionTxtView" destination="oD0-js-Fdb" id="TIb-0S-oSt"/>
+                        <outlet property="imagesCollectionView" destination="PEf-E1-GoV" id="Koh-gm-EKg"/>
+                        <outlet property="nameLbl" destination="oil-xy-znk" id="FH4-ns-TPI"/>
+                        <outlet property="priceLbl" destination="cL5-eo-0ds" id="K9K-nZ-CmT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1lS-rR-W9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5160.8695652173919" y="-237.05357142857142"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="2lC-ch-EfE">
             <objects>
@@ -283,11 +390,11 @@
             </objects>
             <point key="canvasLocation" x="865" y="101"/>
         </scene>
-        <!--Category-->
+        <!--Home-->
         <scene sceneID="qZR-Jc-huc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fgs-RF-60x" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Category" image="square.grid.3x2" catalog="system" id="RGY-Vh-kzd"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="RGY-Vh-kzd"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1vp-NF-DaB">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -311,6 +418,7 @@
     <resources>
         <image name="camera.fill" catalog="system" width="128" height="96"/>
         <image name="gallery_empty_view_image.png" width="72" height="49"/>
-        <image name="square.grid.3x2" catalog="system" width="128" height="80"/>
+        <image name="gallery_placeholder.png" width="50" height="50"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
     </resources>
 </document>
