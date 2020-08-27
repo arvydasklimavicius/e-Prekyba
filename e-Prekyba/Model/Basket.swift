@@ -50,3 +50,13 @@ func saveCartToFirestore(_ basket: Basket) {
 func basketDictionaryFrom(_ basket: Basket) -> NSDictionary {
     return NSDictionary(objects: [basket.id, basket.itemIds, basket.ownerId], forKeys: [cOBJECTID as NSCopying, cITEMSID as NSCopying, cOWNERID as NSCopying])
 }
+
+//MARK: - Update Basket
+
+func updateBasketInFirestore(_ basket: Basket,
+                             withValues: [String: Any],
+                             completion: @escaping (_ error: Error?) -> ()) {
+    FirebaseReferrence(.Basket).document(basket.id).updateData(withValues) { (error) in
+        completion(error)
+    }
+}
