@@ -26,6 +26,10 @@ class ItemVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
+        dovnloadPictures()
+        
+        self.navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(self.backAction))]
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.addToCartButtonPressed))]
         
     }
     
@@ -40,17 +44,44 @@ class ItemVC: UIViewController {
         }
     }
     
+    //MARK: - Download Pictures
+    private func dovnloadPictures() {
+        if item != nil && item.imageLinks != nil {
+            downloadImages(imageUrls: item.imageLinks) { (allImages) in
+                if allImages.count > 0 {
+                    self.itemImages = allImages as! [UIImage]
+                    self.imagesCollectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    @objc func backAction() {
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func addToCartButtonPressed() {
+        print("Add to cart", item.name)
+        self.navigationController?.popViewController(animated: true)
+        
+    }
+    
     
 
 }
 
 extension ItemVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 0
+        return itemImages.count == 0 ? 1 : itemImages.count //jei gausim 0 pict mes rodom 1 paveiksliuka(placeholder)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return UICollectionViewCell()
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemImagesCell", for: indexPath) as! ImageCollectionViewCell
+        if itemImages.count > 0 {
+            cell.setupImageView(itemImage: itemImages[indexPath.row])
+        }
+        
+        return cell
     }
     
     
