@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE2A281F24F7F92F0097D82F /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A281E24F7F92F0097D82F /* Basket.swift */; };
 		CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */; };
 		CE2D6AF424D2EB3D0018E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */; };
 		CE2D6AF924D2EB3D0018E1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		18CF7E12840F568C2CF7D8A3 /* Pods-e-Prekyba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Prekyba.debug.xcconfig"; path = "Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba.debug.xcconfig"; sourceTree = "<group>"; };
+		CE2A281E24F7F92F0097D82F /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
 		CE2D6AEE24D2EB3D0018E1BD /* e-Prekyba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Prekyba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 			children = (
 				CE66171D24D32597009F0455 /* Category.swift */,
 				CE66172424D9A04E009F0455 /* Item.swift */,
+				CE2A281E24F7F92F0097D82F /* Basket.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				CE7D3D0424F569B400CDACF4 /* ItemVC.swift in Sources */,
 				CE66171E24D32597009F0455 /* Category.swift in Sources */,
 				CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */,
+				CE2A281F24F7F92F0097D82F /* Basket.swift in Sources */,
 				CE7D3D0024EEAD6400CDACF4 /* ItemTVCell.swift in Sources */,
 				CE7D3D0224EEBAB500CDACF4 /* HelperFunctions.swift in Sources */,
 				CE66172724D9B730009F0455 /* AddItemVC.swift in Sources */,
