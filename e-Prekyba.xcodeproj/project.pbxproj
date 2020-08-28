@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE2A281F24F7F92F0097D82F /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A281E24F7F92F0097D82F /* Basket.swift */; };
+		CE2A282124F916040097D82F /* BasketVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2A282024F916040097D82F /* BasketVC.swift */; };
 		CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */; };
 		CE2D6AF424D2EB3D0018E1BD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */; };
 		CE2D6AF924D2EB3D0018E1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */; };
@@ -34,6 +35,7 @@
 /* Begin PBXFileReference section */
 		18CF7E12840F568C2CF7D8A3 /* Pods-e-Prekyba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-e-Prekyba.debug.xcconfig"; path = "Target Support Files/Pods-e-Prekyba/Pods-e-Prekyba.debug.xcconfig"; sourceTree = "<group>"; };
 		CE2A281E24F7F92F0097D82F /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		CE2A282024F916040097D82F /* BasketVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketVC.swift; sourceTree = "<group>"; };
 		CE2D6AEE24D2EB3D0018E1BD /* e-Prekyba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "e-Prekyba.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE2D6AF124D2EB3D0018E1BD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE2D6AF324D2EB3D0018E1BD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				CE66172224D99D19009F0455 /* ItemsTVC.swift */,
 				CE66172624D9B730009F0455 /* AddItemVC.swift */,
 				CE7D3D0324F569B400CDACF4 /* ItemVC.swift */,
+				CE2A282024F916040097D82F /* BasketVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				CE66172524D9A04E009F0455 /* Item.swift in Sources */,
 				CE7D3D0724F5743100CDACF4 /* ImageCollectionViewCell.swift in Sources */,
 				CE7D3CFE24EC184C00CDACF4 /* Downloader.swift in Sources */,
+				CE2A282124F916040097D82F /* BasketVC.swift in Sources */,
 				CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */,
 				CE7D3D0424F569B400CDACF4 /* ItemVC.swift in Sources */,
 				CE66171E24D32597009F0455 /* Category.swift in Sources */,
