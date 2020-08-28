@@ -61,9 +61,47 @@ class ItemVC: UIViewController {
     }
     
     @objc func addToCartButtonPressed() {
-        print("Add to cart", item.name)
-        self.navigationController?.popViewController(animated: true)
+        //TODO: check if user is logged in
+        downloadBasketFromFirestore("1234") { (basket) in
+            if basket == nil {
+                self.createNewBasket()
+            } else {
+                basket!.itemIds.append(self.item.id)
+                self.updateBasket(basket: basket!, vithValues: [cITEMSID : basket!.itemIds])
+            }
+        }
+    }
+    
+    //MARK: - Add to basket func
+    private func createNewBasket() {
+        let newBasket = Basket()
+        newBasket.id = UUID().uuidString
+        newBasket.ownerId = "1234"
+        newBasket.itemIds = [self.item.id]
+        saveCartToFirestore(newBasket)
         
+        self.hud.textLabel.text = "Added to cart"
+        self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+        self.hud.show(in: self.view)
+        self.hud.dismiss(afterDelay: 2.0)
+    }
+    
+    private func updateBasket(basket: Basket, vithValues: [String: Any]) {
+        updateBasketInFirestore(basket, withValues: vithValues) { (error) in
+            if error != nil {
+                self.hud.textLabel.text = "Error: \(error!.localizedDescription)"
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+                
+                print(error!.localizedDescription)
+            } else {
+                self.hud.textLabel.text = "Added to cart"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            }
+        }
     }
     
     
