@@ -29,7 +29,7 @@ class ItemVC: UIViewController {
         dovnloadPictures()
         
         self.navigationItem.leftBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .rewind, target: self, action: #selector(self.backAction))]
-        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(self.addToCartButtonPressed))]
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(self.addToCartButtonPressed))]
         
     }
     

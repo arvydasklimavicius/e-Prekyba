@@ -87,7 +87,7 @@ class BasketVC: UIViewController {
         checkoutBtn.isEnabled = allItems.count > 0
         
         if checkoutBtn.isEnabled {
-            checkoutBtn.backgroundColor = #colorLiteral(red: 0.3333333433, green: 0.3333333433, blue: 0.3333333433, alpha: 1)
+            checkoutBtn.backgroundColor = #colorLiteral(red: 0.2745098174, green: 0.4862745106, blue: 0.1411764771, alpha: 1)
         } else {
             checkoudBtnDisabled()
         }
@@ -95,6 +95,16 @@ class BasketVC: UIViewController {
     private func checkoudBtnDisabled() {
         checkoutBtn.isEnabled = false
         checkoutBtn.backgroundColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        checkoutBtn.titleLabel?.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+    }
+    //Removing item from firestore basket
+    private func removeItemFormBasket(itemId: String) {
+        for item in 0..<basket!.itemIds.count {
+            if itemId == basket!.itemIds[item] {
+                basket!.itemIds.remove(at: item)
+                return
+            }
+        }
     }
 
 }
@@ -108,6 +118,29 @@ extension BasketVC: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "productCell", for: indexPath) as! ItemTVCell
         cell.configureItemCell(allItems[indexPath.row])
         return cell 
+    }
+    
+    //MARK: - Deleting row (Edit TableView)
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            let itemToDelete = allItems[indexPath.row]
+            allItems.remove(at: indexPath.row)
+            tableView.reloadData()
+            
+            removeItemFormBasket(itemId: itemToDelete.id)
+            
+            updateBasketInFirestore(basket!, withValues: [cITEMSID : basket!.itemIds]) { (error) in
+                if error != nil {
+                    print("Error:", error?.localizedDescription)
+                }
+                self.getBasketItems()
+            }
+        }
     }
     
     
