@@ -83,6 +83,14 @@ class BasketVC: UIViewController {
         return convertToCurrency(totalSum)
     }
     
+    //MARK: - Navigation
+    private func showItemView (withItem: Item) {
+        let itemVC = UIStoryboard.init(name: "Main", bundle: nil ).instantiateViewController(identifier: "itemView") as! ItemVC
+        itemVC.item = withItem
+        self.navigationController?.pushViewController(itemVC, animated: true)
+    }
+    
+    //MARK: - Checkout button configuration and helper functions
     private func checkouBtnStatusUpdate() {
         checkoutBtn.isEnabled = allItems.count > 0
         
@@ -141,6 +149,11 @@ extension BasketVC: UITableViewDelegate, UITableViewDataSource {
                 self.getBasketItems()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        showItemView(withItem: allItems[indexPath.row])
     }
     
     
