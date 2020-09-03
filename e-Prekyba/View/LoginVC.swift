@@ -60,4 +60,23 @@ class LoginVC: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    private func checkForNotEmptyFields()  -> Bool {
+        return (emailTxtLbl.text != "" && passwordTxtLbl.text != "")
+    }
+    
+    //MARK: - Activity Indicator
+    private func showActivityIndicator() {
+        if activityIndicator != nil {
+            self.view.addSubview(activityIndicator!)
+            activityIndicator!.startAnimating()
+        }
+    }
+    
+    private func hideActivityIndicator() {
+        if activityIndicator != nil {
+            activityIndicator!.removeFromSuperview()
+            activityIndicator!.stopAnimating()
+        }
+    }
+    
 }
