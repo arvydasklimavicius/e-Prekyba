@@ -44,7 +44,14 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func registerBtnTapped(_ sender: Any) {
-        
+        if fieldsHaveText() {
+            registerUser()
+        } else {
+            hud.textLabel.text = "All fields are required"
+            hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            hud.show(in: self.view)
+            hud.dismiss(afterDelay: 2.0)
+        }
     }
     
     @IBAction func cancelBtnTapped(_ sender: Any) {
@@ -55,12 +62,31 @@ class LoginVC: UIViewController {
         
     }
     
+    //MARK: - Register User
+    private func registerUser() {
+        showActivityIndicator()
+        User.registerUser(email: emailTxtLbl.text!, password: passwordTxtLbl.text!) { (error) in
+            if error == nil {
+                self.hud.textLabel.text = "Verification Email was sent!"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            } else {
+                self.hud.textLabel.text = error!.localizedDescription
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            }
+            self.hideActivityIndicator()
+        }
+    }
+    
     //MARK: - Helpers
     private func dissmisView() {
         self.dismiss(animated: true, completion: nil)
     }
     
-    private func checkForNotEmptyFields()  -> Bool {
+    private func fieldsHaveText()  -> Bool {
         return (emailTxtLbl.text != "" && passwordTxtLbl.text != "")
     }
     
