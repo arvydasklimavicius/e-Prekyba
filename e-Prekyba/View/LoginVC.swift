@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import JGProgressHUD
+import NVActivityIndicatorView
 
 class LoginVC: UIViewController {
     
@@ -16,13 +18,27 @@ class LoginVC: UIViewController {
     @IBOutlet weak var passwordTxtLbl: UITextField!
     @IBOutlet weak var resendemailBtnOulet: UIButton!
     
-    
+    //MARK: - Variables
+    let hud = JGProgressHUD(style: .dark)
+    var activityIndicator: NVActivityIndicatorView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        activityIndicator = NVActivityIndicatorView(frame: CGRect(x: self.view.frame.height / 2 - 30,
+                                                                  y: self.view.frame.width / 2 - 30,
+                                                                  width: 60.0,
+                                                                  height: 60.0),
+                                                    type: .circleStrokeSpin,
+                                                    color: #colorLiteral(red: 0.3411764801, green: 0.6235294342, blue: 0.1686274558, alpha: 1),
+                                                    padding: nil)
+    }
+    
     @IBAction func loginBtnTapped(_ sender: Any) {
         
     }
@@ -32,11 +48,16 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func cancelBtnTapped(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dissmisView()
     }
     
     @IBAction func forgotPasswordBtnTapped(_ sender: Any) {
         
+    }
+    
+    //MARK: - Helpers
+    private func dissmisView() {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }
