@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oVx-op-y2D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oVx-op-y2D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -240,6 +240,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="xjI-WF-hLI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNj-WP-7gb">
                                         <rect key="frame" x="0.0" y="50" width="300" height="40"/>
@@ -252,6 +255,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="xk1-FY-tfC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD3-Bf-Yyf">
                                         <rect key="frame" x="0.0" y="100" width="300" height="37"/>
@@ -260,6 +266,9 @@
                                         <state key="normal" title="Cancel">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="cancelBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="yFU-Go-X6v"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-0s-2hA">
                                         <rect key="frame" x="0.0" y="147" width="300" height="40"/>
@@ -280,6 +289,9 @@
                                         <state key="normal" title="Forgot Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="forgotPasswordBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="0mT-JC-pwT"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -296,6 +308,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0tl-by-HN8"/>
                     </view>
+                    <connections>
+                        <outlet property="emailTxtLbl" destination="Jj0-aD-CFR" id="cT6-m5-m1P"/>
+                        <outlet property="passwordTxtLbl" destination="nb9-te-z2f" id="aQr-Ky-MCH"/>
+                        <outlet property="resendemailBtnOulet" destination="i5n-0s-2hA" id="DYV-kK-Dwl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="28W-CY-M30" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
