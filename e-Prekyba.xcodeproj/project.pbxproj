@@ -15,6 +15,7 @@
 		CE2D6AF924D2EB3D0018E1BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AF724D2EB3D0018E1BD /* Main.storyboard */; };
 		CE2D6AFB24D2EB3F0018E1BD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */; };
 		CE2D6AFE24D2EB3F0018E1BD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2D6AFC24D2EB3F0018E1BD /* LaunchScreen.storyboard */; };
+		CE3CC1542500F16800851205 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC1532500F16800851205 /* User.swift */; };
 		CE66171324D306A8009F0455 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */; };
 		CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */; };
 		CE66171724D309FF009F0455 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE66171624D309FF009F0455 /* GoogleService-Info.plist */; };
@@ -45,6 +46,7 @@
 		CE2D6AFA24D2EB3F0018E1BD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE2D6AFD24D2EB3F0018E1BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CE2D6AFF24D2EB3F0018E1BD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE3CC1532500F16800851205 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE66171624D309FF009F0455 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -156,6 +158,7 @@
 				CE66171D24D32597009F0455 /* Category.swift */,
 				CE66172424D9A04E009F0455 /* Item.swift */,
 				CE2A281E24F7F92F0097D82F /* Basket.swift */,
+				CE3CC1532500F16800851205 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				CE2A282124F916040097D82F /* BasketVC.swift in Sources */,
 				CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */,
 				CE7D3D0424F569B400CDACF4 /* ItemVC.swift in Sources */,
+				CE3CC1542500F16800851205 /* User.swift in Sources */,
 				CE66171E24D32597009F0455 /* Category.swift in Sources */,
 				CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */,
 				CE2A281F24F7F92F0097D82F /* Basket.swift in Sources */,

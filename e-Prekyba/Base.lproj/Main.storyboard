@@ -198,7 +198,7 @@
         <!--LoginVC-->
         <scene sceneID="zfa-VL-eGy">
             <objects>
-                <viewController id="B49-JX-zos" customClass="LoginVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginView" id="B49-JX-zos" customClass="LoginVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TSg-Fm-WoS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,7 +227,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="YET-Y6-ooG">
-                                <rect key="frame" x="57" y="470" width="300" height="234"/>
+                                <rect key="frame" x="57" y="470" width="300" height="137"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lmo-Kx-Tb2">
                                         <rect key="frame" x="0.0" y="0.0" width="300" height="40"/>
@@ -259,19 +259,19 @@
                                             <action selector="registerBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="xk1-FY-tfC"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD3-Bf-Yyf">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsI-5E-Xhr">
                                         <rect key="frame" x="0.0" y="100" width="300" height="37"/>
-                                        <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                        <state key="normal" title="Cancel">
+                                        <state key="normal" title="Forgot Password">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
-                                            <action selector="cancelBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="yFU-Go-X6v"/>
+                                            <action selector="forgotPasswordBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="0mT-JC-pwT"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-0s-2hA">
-                                        <rect key="frame" x="0.0" y="147" width="300" height="40"/>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5n-0s-2hA">
+                                        <rect key="frame" x="0.0" y="137" width="300" height="40"/>
                                         <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="drn-tT-lW7"/>
@@ -282,25 +282,31 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsI-5E-Xhr">
-                                        <rect key="frame" x="0.0" y="197" width="300" height="37"/>
-                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
-                                        <state key="normal" title="Forgot Password">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="forgotPasswordBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="0mT-JC-pwT"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JD3-Bf-Yyf">
+                                <rect key="frame" x="57" y="667" width="300" height="37"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="37" id="r3d-YZ-MA9"/>
+                                    <constraint firstAttribute="width" constant="300" id="vJM-49-k6a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Heavy" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelBtnTapped:" destination="B49-JX-zos" eventType="touchUpInside" id="yFU-Go-X6v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AEX-z7-ggm" firstAttribute="top" secondItem="0tl-by-HN8" secondAttribute="top" constant="80" id="JwX-v4-Wii"/>
                             <constraint firstItem="YET-Y6-ooG" firstAttribute="top" secondItem="6Uh-xy-8hE" secondAttribute="bottom" constant="80" id="Lon-2u-0Cy"/>
+                            <constraint firstItem="JD3-Bf-Yyf" firstAttribute="top" secondItem="YET-Y6-ooG" secondAttribute="bottom" constant="60" id="U5C-52-N2o"/>
                             <constraint firstItem="YET-Y6-ooG" firstAttribute="centerX" secondItem="TSg-Fm-WoS" secondAttribute="centerX" id="VdB-PJ-uWy"/>
+                            <constraint firstItem="JD3-Bf-Yyf" firstAttribute="centerX" secondItem="TSg-Fm-WoS" secondAttribute="centerX" id="bkq-tW-GF3"/>
                             <constraint firstItem="0tl-by-HN8" firstAttribute="trailing" secondItem="6Uh-xy-8hE" secondAttribute="trailing" constant="18" id="c0W-rJ-xk7"/>
                             <constraint firstItem="6Uh-xy-8hE" firstAttribute="leading" secondItem="0tl-by-HN8" secondAttribute="leading" constant="18" id="hJv-Qa-bZm"/>
                             <constraint firstItem="AEX-z7-ggm" firstAttribute="centerX" secondItem="TSg-Fm-WoS" secondAttribute="centerX" id="sHd-Sf-7TH"/>

@@ -24,15 +24,19 @@ class LoginVC: UIViewController {
         
     }
     @IBAction func loginBtnTapped(_ sender: Any) {
+        
     }
     
     @IBAction func registerBtnTapped(_ sender: Any) {
+        
     }
     
     @IBAction func cancelBtnTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func forgotPasswordBtnTapped(_ sender: Any) {
+        
     }
     
 }

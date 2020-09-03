@@ -34,6 +34,16 @@ public let cIMAGELINKS = "imageLinks"
 public let cOWNERID = "ownerId"
 public let cITEMSID = "itemIds"
 
+//MARK: - User
+public let cEMAIL = "email"
+public let cUSERNAME = "userName"
+public let cLASTNAME = "lastName"
+public let cFULLNAME = "fullName"
+public let cCURRENTUSER = "currentUser"
+public let cFULLADDRESS = "fullAddress"
+public let cONBOARD = "onBoard"
+public let cPURCHASEDITEMIDS = "purchasedItemIds"
+
 
 
 
