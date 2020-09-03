@@ -88,4 +88,39 @@ class User {
         }
         return nil //User is Optional so we can have empty obj.
     }
+    
+    //MARK: - Login func
+    class func loginUserWith(_ email: String, _ password: String,
+                             completion: @escaping(_ error: Error?, _ isEmailVerified: Bool) -> ()) {
+        
+        Auth.auth().signIn(withEmail: email, password: password) { (authResult, error) in
+            if error == nil {
+                //checking if email is verified
+                if authResult!.user.isEmailVerified {
+                    //to download user from FireB an save it locally
+                    
+                    completion(error, true)
+                } else {
+                    print("Email is not verified")
+                    completion(error, false) //adding completion with false because email is not verified
+                }
+            } else {
+                completion(error, false)
+            }
+        }
+    }
+    
+    //MARK: - Register User
+    class func registerUser(email: String, password: String,
+                            completion: @escaping(_ error: Error?) -> () ) {
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            completion(error)
+            if error == nil {
+                //send verification
+                authResult?.user.sendEmailVerification(completion: { (error) in
+                    print("Auth verification email error:", error?.localizedDescription)
+                })
+            }
+        }
+    }
 }
