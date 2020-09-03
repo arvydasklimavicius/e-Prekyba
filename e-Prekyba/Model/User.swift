@@ -75,4 +75,17 @@ class User {
         
         
     }
+    //MARK: - Return Current User
+    class func currentId() -> String {
+        return Auth.auth().currentUser!.uid
+    }
+    class func currentUser() -> User? {
+        if Auth.auth().currentUser != nil {
+            //checking that current user is the same as in saved userDefaults
+            if let dictionary = UserDefaults.standard.object(forKey: cCURRENTUSER) {
+                return User.init(_dictioinary: dictionary as!NSDictionary)
+            }
+        }
+        return nil //User is Optional so we can have empty obj.
+    }
 }
