@@ -125,7 +125,7 @@ class User {
         }
     }
     //MARK: - Resend link methods
-    class func resetPaswordFor(email: String, completion: @escaping(_ error: Error?) -> (Error)) {
+    class func resetPaswordFor(email: String, completion: @escaping(_ error: Error?) -> ()) {
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
              completion(error)
         }

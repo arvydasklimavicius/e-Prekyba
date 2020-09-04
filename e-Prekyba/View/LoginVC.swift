@@ -60,7 +60,20 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func forgotPasswordBtnTapped(_ sender: Any) {
-        
+        if emailTxtLbl.text != "" {
+            resetPassword()
+        } else {
+            self.hud.textLabel.text = "Please insert your email!"
+            self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2.0)
+        }
+    }
+    
+    @IBAction func resendEmailTapped(_ sender: Any) {
+        User.resendVerificationEmail(email: emailTxtLbl.text!) { (error) in
+            print(error?.localizedDescription)
+        }
     }
     
     //MARK: - Login User
@@ -75,6 +88,7 @@ class LoginVC: UIViewController {
                     self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
                     self.hud.show(in: self.view)
                     self.hud.dismiss(afterDelay: 2.0)
+                    self.resendemailBtnOulet.isHidden = false
                 }
             } else {
                 self.hud.textLabel.text = error!.localizedDescription
@@ -133,6 +147,19 @@ class LoginVC: UIViewController {
         if activityIndicator != nil {
             activityIndicator!.removeFromSuperview()
             activityIndicator!.stopAnimating()
+        }
+    }
+    
+    private func resetPassword() {
+        User.resetPaswordFor(email: emailTxtLbl.text!) { (error) -> () in
+            if error == nil {
+                self.hud.textLabel.text = "Reset password Email was sent!"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            } else {
+                self.emptyTextFieldError()
+            }
         }
     }
     
