@@ -99,7 +99,7 @@ class User {
                 //checking if email is verified
                 if authResult!.user.isEmailVerified {
                     //to download user from FireB an save it locally
-                    downloadUserFromFirebase(userId: authResult?.user.uid, email: email)
+                    downloadUserFromFirebase(userId: authResult!.user.uid, email: email)
                     completion(error, true)
                 } else {
                     print("Email is not verified")
@@ -124,7 +124,24 @@ class User {
             }
         }
     }
+    //MARK: - Resend link methods
+    class func resetPaswordFor(email: String, completion: @escaping(_ error: Error?) -> (Error)) {
+        Auth.auth().sendPasswordReset(withEmail: email) { (error) in
+             completion(error)
+        }
+    }
+    
+    class func resendVerificationEmail(email: String, completion: @escaping(_ error: Error?) -> ()) {
+        Auth.auth().currentUser?.reload(completion: { (error) in
+            Auth.auth().currentUser?.sendEmailVerification(completion: { (error) in
+                print("resend verivication email error:", error!.localizedDescription)
+                completion(error)
+            })
+        })
+    }
+
 }
+
 
 //MARK: - Save User to Firebase
 func saveUserToFirestore(user: User) {
