@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseAuth
+import Firebase
 
 class User {
     let objectId: String
@@ -98,7 +99,7 @@ class User {
                 //checking if email is verified
                 if authResult!.user.isEmailVerified {
                     //to download user from FireB an save it locally
-                    
+                    downloadUserFromFirebase(userId: authResult?.user.uid, email: email)
                     completion(error, true)
                 } else {
                     print("Email is not verified")
@@ -157,4 +158,20 @@ func userDictionaryFrom(user: User) -> NSDictionary {
                                   cFULLADDRESS as NSCopying,
                                   cONBOARD as NSCopying,
                                   cPURCHASEDITEMIDS as NSCopying ])
+}
+
+//MARK: - Download User From Firebase
+func downloadUserFromFirebase(userId: String, email: String) {
+    FirebaseReferrence(.User).document(userId).getDocument { (snapshot, error) in
+        guard let snapshot = snapshot else { return }
+        if snapshot.exists {
+            print("download user from firesbase")
+            saveUserLocally(userDictionary: snapshot.data()! as NSDictionary)
+        } else {
+            //if there is no user created, we save new user to firestore and UserDefaults
+            let user = User(_objectId: userId, _email: email, _userName: "", _lastName: "")
+            saveUserLocally(userDictionary: userDictionaryFrom(user: user))
+            saveUserToFirestore(user: user)
+        }
+    }
 }
