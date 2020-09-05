@@ -710,6 +710,7 @@
                         <segue destination="Fgs-RF-60x" kind="relationship" relationship="viewControllers" id="nKI-8G-4Um"/>
                         <segue destination="NIx-QO-7T7" kind="relationship" relationship="viewControllers" id="Jhb-TG-3Kj"/>
                         <segue destination="PWV-pf-Fyc" kind="relationship" relationship="viewControllers" id="Kfk-z5-u4z"/>
+                        <segue destination="jFb-Yh-Zk8" kind="relationship" relationship="viewControllers" id="WAK-4d-lXD"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ncp-Gl-0bF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -759,6 +760,116 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eVg-8F-588" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1808.6956521739132" y="1117.6339285714284"/>
+        </scene>
+        <!--User Profile-->
+        <scene sceneID="xXu-gG-Z4K">
+            <objects>
+                <tableViewController id="3KO-2e-IPp" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N36-dF-3Jz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <sections>
+                            <tableViewSection id="UIj-UO-zfc">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="bQu-sH-pRp">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bQu-sH-pRp" id="WQ8-m3-hb2">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oHE-4o-4Di">
+                                                    <rect key="frame" x="16" y="3" width="352" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                                    <state key="normal" title="Finish Registration">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="oHE-4o-4Di" secondAttribute="trailing" constant="15" id="NMR-uH-eZ6"/>
+                                                <constraint firstItem="oHE-4o-4Di" firstAttribute="centerY" secondItem="WQ8-m3-hb2" secondAttribute="centerY" id="Qjc-cr-983"/>
+                                                <constraint firstItem="oHE-4o-4Di" firstAttribute="leading" secondItem="WQ8-m3-hb2" secondAttribute="leading" constant="16" id="TwD-aw-SPW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Sff-WN-6bX">
+                                        <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Sff-WN-6bX" id="LSi-QO-Dkv">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6A4-WN-dh2">
+                                                    <rect key="frame" x="16" y="3" width="352" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                                    <state key="normal" title="Purchase History">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="6A4-WN-dh2" secondAttribute="trailing" constant="15" id="laz-GY-rER"/>
+                                                <constraint firstItem="6A4-WN-dh2" firstAttribute="leading" secondItem="LSi-QO-Dkv" secondAttribute="leading" constant="16" id="uu4-NZ-7Zm"/>
+                                                <constraint firstItem="6A4-WN-dh2" firstAttribute="centerY" secondItem="LSi-QO-Dkv" secondAttribute="centerY" id="xF1-6T-Zzk"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="uTv-i5-jiR">
+                                        <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="uTv-i5-jiR" id="fl3-oU-gil">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRe-C2-1hg">
+                                                    <rect key="frame" x="16" y="3" width="352" height="38"/>
+                                                    <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="19"/>
+                                                    <state key="normal" title="Terms &amp; Conditions">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="jRe-C2-1hg" firstAttribute="leading" secondItem="fl3-oU-gil" secondAttribute="leading" constant="16" id="73N-RC-Hj0"/>
+                                                <constraint firstAttribute="trailing" secondItem="jRe-C2-1hg" secondAttribute="trailing" constant="15" id="ILf-Q7-TYc"/>
+                                                <constraint firstItem="jRe-C2-1hg" firstAttribute="centerY" secondItem="fl3-oU-gil" secondAttribute="centerY" id="kxD-OA-CJg"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="3KO-2e-IPp" id="7NR-na-eEd"/>
+                            <outlet property="delegate" destination="3KO-2e-IPp" id="fEe-uT-cNY"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="User Profile" id="Xd6-Tn-YzH"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BNx-PU-Yz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2726.0869565217395" y="1787.9464285714284"/>
+        </scene>
+        <!--User-->
+        <scene sceneID="ubE-3c-Bf8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jFb-Yh-Zk8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="User" image="person.fill" catalog="system" id="0K7-db-7tX"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yRq-8g-z6y">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="3KO-2e-IPp" kind="relationship" relationship="rootViewController" id="czu-jq-7YM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WL6-S7-URU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1815.9420289855075" y="1787.9464285714284"/>
         </scene>
     </scenes>
     <resources>
