@@ -13,7 +13,7 @@ class UserTableVC: UITableViewController {
     
     //MARK: - Outlets
     
-    @IBOutlet weak var finidhRegistrationBtnOutlet: UIButton!
+    @IBOutlet weak var finishRegistrationBtnOutlet: UIButton!
     @IBOutlet weak var purchaseHistoryBtnOutlet: UIButton!
     
     //MARK: - VAriables
@@ -42,6 +42,7 @@ class UserTableVC: UITableViewController {
     //MARK: - Helper functions
     private func createRightBarButtonItem(title: String) {
         editButtonOutlet = UIBarButtonItem(title: title, style: .plain, target: self, action: #selector(rightBarButtonItemTapped))
+        editButtonOutlet.tintColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
         self.navigationItem.rightBarButtonItem = editButtonOutlet
     }
     
@@ -64,16 +65,17 @@ class UserTableVC: UITableViewController {
     private func checkOnboardingStatus() {
         if User.currentUser() != nil {
             if User.currentUser()!.onBoard{
-                finidhRegistrationBtnOutlet.setTitle("Account is active", for: .normal)
-                finidhRegistrationBtnOutlet.isEnabled = false
+                finishRegistrationBtnOutlet.setTitle("Account is active", for: .normal)
+                finishRegistrationBtnOutlet.isEnabled = false
             } else {
-                finidhRegistrationBtnOutlet.setTitle("Finish registration!", for: .normal)
-                finidhRegistrationBtnOutlet.tintColor = .red
-                finidhRegistrationBtnOutlet.isEnabled = true
+                finishRegistrationBtnOutlet.setTitle("Finish registration!", for: .normal)
+                finishRegistrationBtnOutlet.isEnabled = true
+                finishRegistrationBtnOutlet.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1) // need to change text color!
+                
             }
         } else {
-            finidhRegistrationBtnOutlet.setTitle("Logged Out", for: .normal)
-            finidhRegistrationBtnOutlet.isEnabled = false
+            finishRegistrationBtnOutlet.setTitle("Logged Out", for: .normal)
+            finishRegistrationBtnOutlet.isEnabled = false
             purchaseHistoryBtnOutlet.isEnabled = false
         }
     }

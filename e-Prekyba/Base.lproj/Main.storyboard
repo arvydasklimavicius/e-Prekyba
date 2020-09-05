@@ -851,7 +851,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="User Profile" id="Xd6-Tn-YzH"/>
                     <connections>
-                        <outlet property="finidhRegistrationBtnOutlet" destination="oHE-4o-4Di" id="PgJ-BO-V2J"/>
+                        <outlet property="finishRegistrationBtnOutlet" destination="oHE-4o-4Di" id="PgJ-BO-V2J"/>
                         <outlet property="purchaseHistoryBtnOutlet" destination="6A4-WN-dh2" id="jy4-eb-N3G"/>
                     </connections>
                 </tableViewController>
