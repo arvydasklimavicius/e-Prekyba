@@ -764,11 +764,11 @@
         <!--User Profile-->
         <scene sceneID="xXu-gG-Z4K">
             <objects>
-                <tableViewController id="3KO-2e-IPp" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N36-dF-3Jz">
+                <tableViewController id="3KO-2e-IPp" customClass="UserTableVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="N36-dF-3Jz">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <sections>
                             <tableViewSection id="UIj-UO-zfc">
                                 <cells>
@@ -793,6 +793,7 @@
                                                 <constraint firstItem="oHE-4o-4Di" firstAttribute="leading" secondItem="WQ8-m3-hb2" secondAttribute="leading" constant="16" id="TwD-aw-SPW"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="Sff-WN-6bX">
                                         <rect key="frame" x="0.0" y="71.5" width="414" height="43.5"/>
@@ -815,6 +816,7 @@
                                                 <constraint firstItem="6A4-WN-dh2" firstAttribute="centerY" secondItem="LSi-QO-Dkv" secondAttribute="centerY" id="xF1-6T-Zzk"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="uTv-i5-jiR">
                                         <rect key="frame" x="0.0" y="115" width="414" height="43.5"/>
@@ -837,6 +839,7 @@
                                                 <constraint firstItem="jRe-C2-1hg" firstAttribute="centerY" secondItem="fl3-oU-gil" secondAttribute="centerY" id="kxD-OA-CJg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -847,6 +850,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="User Profile" id="Xd6-Tn-YzH"/>
+                    <connections>
+                        <outlet property="finidhRegistrationBtnOutlet" destination="oHE-4o-4Di" id="PgJ-BO-V2J"/>
+                        <outlet property="purchaseHistoryBtnOutlet" destination="6A4-WN-dh2" id="jy4-eb-N3G"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNx-PU-Yz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -861,6 +868,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yRq-8g-z6y">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
