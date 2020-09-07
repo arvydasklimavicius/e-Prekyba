@@ -192,3 +192,20 @@ func downloadUserFromFirebase(userId: String, email: String) {
         }
     }
 }
+
+//MARK: - Update User in Firestore
+func updateCurrentUserInFirestore(withValues: [String: Any], completion: @escaping(_ error: Error?) -> ()) {
+    //taking user object from userDefaults, updating userObject and then update it in Firebase
+    if let dictionary = UserDefaults.standard.object(forKey: cCURRENTUSER) {
+        let userObject = (dictionary as! NSDictionary).mutableCopy() as! NSMutableDictionary
+        userObject.setValuesForKeys(withValues)
+        
+        FirebaseReferrence(.User).document(User.currentId()).updateData(withValues) { (error) in
+            completion(error)
+            if error == nil {
+                //we updated user and now saving it locally
+                saveUserLocally(userDictionary: userObject)
+            }
+        }
+    }
+}
