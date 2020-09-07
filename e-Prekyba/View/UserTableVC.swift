@@ -91,7 +91,7 @@ class UserTableVC: UITableViewController {
     }
     
     private func editProfileView() {
-        print("go to profile edit view")
+        performSegue(withIdentifier: "toEditView", sender: self)
     }
     
 
