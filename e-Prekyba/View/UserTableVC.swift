@@ -38,6 +38,11 @@ class UserTableVC: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 3
     }
+    
+    //MARK: - TableView delegates
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 
     //MARK: - Helper functions
     private func createRightBarButtonItem(title: String) {
@@ -65,12 +70,12 @@ class UserTableVC: UITableViewController {
     private func checkOnboardingStatus() {
         if User.currentUser() != nil {
             if User.currentUser()!.onBoard{
-                finishRegistrationBtnOutlet.setTitle("Account is active", for: .normal)
+                finishRegistrationBtnOutlet.setTitle("Account is active!", for: .normal)
                 finishRegistrationBtnOutlet.isEnabled = false
             } else {
                 finishRegistrationBtnOutlet.setTitle("Finish registration!", for: .normal)
                 finishRegistrationBtnOutlet.isEnabled = true
-                finishRegistrationBtnOutlet.backgroundColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1) // need to change text color!
+                finishRegistrationBtnOutlet.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1) // need to change text color!
                 
             }
         } else {
