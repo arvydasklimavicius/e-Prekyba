@@ -30,7 +30,7 @@ class RegistrationVC: UIViewController {
     //MARK: - Actions
     
     @IBAction func doneBtnTapped(_ sender: Any) {
-        
+        finishRegistration() 
     }
     
     @IBAction func cancelBtnTapped(_ sender: Any) {
@@ -59,6 +59,32 @@ class RegistrationVC: UIViewController {
             doneBtnOutlet.isEnabled = false
         }
         
+    }
+    
+    private func finishRegistration() {
+        let withValues = [cUSERNAME: nameTxtField.text!,
+                          cLASTNAME: surnameTxtField.text!,
+                          cFULLADDRESS: addressTxtField.text!,
+                          cFULLNAME: (nameTxtField.text! + " " + surnameTxtField.text!),
+                          cONBOARD: true,
+                          
+        ] as [String: Any]
+        
+        updateCurrentUserInFirestore(withValues: withValues) { (error) in
+            if error == nil {
+                self.hud.textLabel.text = "User information updated"
+                self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+                
+                self.dismiss(animated: true, completion: nil)
+            } else {
+                self.hud.textLabel.text = error!.localizedDescription
+                self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+                self.hud.show(in: self.view)
+                self.hud.dismiss(afterDelay: 2.0)
+            }
+        }
     }
     
 }
