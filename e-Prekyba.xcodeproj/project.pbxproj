@@ -19,6 +19,7 @@
 		CE3CC1562503CA2400851205 /* UserTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC1552503CA2400851205 /* UserTableVC.swift */; };
 		CE3CC15A2503E75300851205 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC1592503E75300851205 /* RoundedButton.swift */; };
 		CE3CC15C250668DE00851205 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC15B250668DE00851205 /* RegistrationVC.swift */; };
+		CE3CC15E2506886400851205 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC15D2506886400851205 /* EditProfileVC.swift */; };
 		CE66171324D306A8009F0455 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */; };
 		CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */; };
 		CE66171724D309FF009F0455 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE66171624D309FF009F0455 /* GoogleService-Info.plist */; };
@@ -53,6 +54,7 @@
 		CE3CC1552503CA2400851205 /* UserTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableVC.swift; sourceTree = "<group>"; };
 		CE3CC1592503E75300851205 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CE3CC15B250668DE00851205 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
+		CE3CC15D2506886400851205 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE66171624D309FF009F0455 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -157,6 +159,7 @@
 				CE3CC1552503CA2400851205 /* UserTableVC.swift */,
 				CE3CC1592503E75300851205 /* RoundedButton.swift */,
 				CE3CC15B250668DE00851205 /* RegistrationVC.swift */,
+				CE3CC15D2506886400851205 /* EditProfileVC.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -332,6 +335,7 @@
 				CE7D3CFC24EC173000CDACF4 /* Reachability.swift in Sources */,
 				CE66172124D32ABA009F0455 /* Constants.swift in Sources */,
 				CE66171924D321EE009F0455 /* FirebaseCollectionRefference.swift in Sources */,
+				CE3CC15E2506886400851205 /* EditProfileVC.swift in Sources */,
 				CE66171324D306A8009F0455 /* CategoryCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

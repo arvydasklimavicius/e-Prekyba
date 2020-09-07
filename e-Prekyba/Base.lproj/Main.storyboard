@@ -856,7 +856,7 @@
                     <connections>
                         <outlet property="finishRegistrationBtnOutlet" destination="oHE-4o-4Di" id="PgJ-BO-V2J"/>
                         <outlet property="purchaseHistoryBtnOutlet" destination="6A4-WN-dh2" id="jy4-eb-N3G"/>
-                        <segue destination="PWt-SN-YaA" kind="show" id="Q9Y-wb-rQu"/>
+                        <segue destination="PWt-SN-YaA" kind="show" identifier="toEditView" id="Q9Y-wb-rQu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BNx-PU-Yz5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -966,7 +966,7 @@
         <!--Edit Profile-->
         <scene sceneID="P5o-fi-GRh">
             <objects>
-                <viewController id="PWt-SN-YaA" sceneMemberID="viewController">
+                <viewController id="PWt-SN-YaA" customClass="EditProfileVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iMW-Pt-uH2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1012,6 +1012,9 @@
                                         <state key="normal" title="Save">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="saveBtnTapped:" destination="PWt-SN-YaA" eventType="touchUpInside" id="1jA-EQ-WvC"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wim-Ki-WVf" customClass="RoundedButton" customModule="e_Prekyba" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="300" height="40"/>
@@ -1023,6 +1026,9 @@
                                         <state key="normal" title="Log Out">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logOutBtnTapped:" destination="PWt-SN-YaA" eventType="touchUpInside" id="pCZ-SD-nK7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -1043,6 +1049,11 @@
                         <viewLayoutGuide key="safeArea" id="3O5-th-ohN"/>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="Muk-ei-bcB"/>
+                    <connections>
+                        <outlet property="addressTxtField" destination="04X-sE-cOz" id="mKx-Vq-EWJ"/>
+                        <outlet property="nameTxtField" destination="J5u-pr-Gde" id="cwL-Po-NJd"/>
+                        <outlet property="surnameTxtField" destination="pwG-IS-Yal" id="zK1-7K-pPJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pUr-u8-ojl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
