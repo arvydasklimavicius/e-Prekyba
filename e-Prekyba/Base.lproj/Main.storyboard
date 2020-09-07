@@ -862,10 +862,10 @@
             </objects>
             <point key="canvasLocation" x="2719" y="1965"/>
         </scene>
-        <!--View Controller-->
+        <!--RegistrationVC-->
         <scene sceneID="cFt-PR-deq">
             <objects>
-                <viewController id="M6y-Wo-bPe" sceneMemberID="viewController">
+                <viewController id="M6y-Wo-bPe" customClass="RegistrationVC" customModule="e_Prekyba" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="et6-Wu-K18">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -907,6 +907,9 @@
                                 <state key="normal" title="Done">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneBtnTapped:" destination="M6y-Wo-bPe" eventType="touchUpInside" id="eTn-En-dOK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oT0-Fh-c3u" customClass="RoundedButton" customModule="e_Prekyba" customModuleProvider="target">
                                 <rect key="frame" x="57" y="672" width="300" height="40"/>
@@ -919,6 +922,9 @@
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelBtnTapped:" destination="M6y-Wo-bPe" eventType="touchUpInside" id="Evy-pz-xVR"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="rQy-tg-kL0">
                                 <rect key="frame" x="143" y="104" width="128" height="125.5"/>
@@ -946,6 +952,12 @@
                         <viewLayoutGuide key="safeArea" id="sVu-KE-7gY"/>
                     </view>
                     <navigationItem key="navigationItem" id="xVh-A7-mgy"/>
+                    <connections>
+                        <outlet property="addressTxtField" destination="a4B-cR-ANq" id="qBs-Ld-19B"/>
+                        <outlet property="doneBtnOutlet" destination="0kc-rT-pw8" id="Xe6-RK-2pw"/>
+                        <outlet property="nameTxtField" destination="3Kf-5z-8tM" id="F5N-I1-5SD"/>
+                        <outlet property="surnameTxtField" destination="1Y5-k2-KzG" id="EWs-ka-dJM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m60-vy-zoE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
