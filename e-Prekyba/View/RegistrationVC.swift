@@ -38,7 +38,7 @@ class RegistrationVC: UIViewController {
     }
     
     //MARK: - text fields actions
-    func checkForFilledFields() {
+    private func checkForFilledFields() {
         nameTxtField.addTarget(self, action: #selector(self.textFieldDidChange(_ : )), for: UIControl.Event.editingChanged)
         surnameTxtField.addTarget(self, action: #selector(self.textFieldDidChange(_ : )), for: UIControl.Event.editingChanged)
         addressTxtField.addTarget(self, action: #selector(self.textFieldDidChange(_ : )), for: UIControl.Event.editingChanged)
@@ -46,6 +46,18 @@ class RegistrationVC: UIViewController {
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
+        updateDoneButtonStatus()
+    }
+    
+    //MARK: - Helper functions
+    private func updateDoneButtonStatus() {
+        if nameTxtField.text != "" && surnameTxtField.text != "" && addressTxtField.text != "" {
+            doneBtnOutlet.backgroundColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0, alpha: 1)
+            doneBtnOutlet.isEnabled = true
+        } else {
+            doneBtnOutlet.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+            doneBtnOutlet.isEnabled = false
+        }
         
     }
     
