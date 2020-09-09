@@ -52,7 +52,7 @@ class UserTableVC: UITableViewController {
     }
     
     @objc func rightBarButtonItemTapped() {
-        if editButtonItem.title == "Login" {
+        if editButtonOutlet.title == "Login" {
             showLoginView()
         } else {
             editProfileView()
@@ -78,6 +78,7 @@ class UserTableVC: UITableViewController {
                 finishRegistrationBtnOutlet.tintColor = #colorLiteral(red: 0.9254902005, green: 0.2352941185, blue: 0.1019607857, alpha: 1) // need to change text color!
                 
             }
+            purchaseHistoryBtnOutlet.isEnabled = true
         } else {
             finishRegistrationBtnOutlet.setTitle("Logged Out", for: .normal)
             finishRegistrationBtnOutlet.isEnabled = false
