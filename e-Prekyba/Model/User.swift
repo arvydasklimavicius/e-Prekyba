@@ -119,11 +119,24 @@ class User {
             if error == nil {
                 //send verification
                 authResult?.user.sendEmailVerification(completion: { (error) in
-                    print("Auth verification email error:", error?.localizedDescription)
+                    print("Auth verification email error:", error!.localizedDescription)
                 })
             }
         }
     }
+    //MARK: - Log Out
+    class func logOutCurrentUser(completion: @escaping(_ error: Error?) -> ()) {
+        do {
+            try Auth.auth().signOut()
+            UserDefaults.standard.removeObject(forKey: cCURRENTUSER) //Deleting User from user defaults
+            UserDefaults.standard.synchronize()
+            completion(nil)
+            
+        } catch let error as NSError {
+            completion(error)
+        }
+    }
+
     //MARK: - Resend link methods
     class func resetPaswordFor(email: String, completion: @escaping(_ error: Error?) -> ()) {
         Auth.auth().sendPasswordReset(withEmail: email) { (error) in
@@ -139,7 +152,7 @@ class User {
             })
         })
     }
-
+    
 }
 
 

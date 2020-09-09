@@ -58,7 +58,7 @@ class EditProfileVC: UIViewController {
     }
     
     @IBAction func logOutBtnTapped(_ sender: Any) {
-        
+        logoutUser()
     }
     
     //MARK: - Load user data to UI
@@ -78,5 +78,16 @@ class EditProfileVC: UIViewController {
     
     private func textFieldsHaveText() -> Bool {
         return(nameTxtField.text != "" && surnameTxtField.text != "" && addressTxtField.text != "")
+    }
+    
+    private func logoutUser() {
+        User.logOutCurrentUser { (error) in
+            if error == nil {
+                print("Logged out successfully")
+                self.navigationController?.popViewController(animated: true)
+            } else {
+                print("Error logging out ", error!.localizedDescription)
+            }
+        }
     }
 }
