@@ -46,6 +46,25 @@ class BasketVC: UIViewController {
     
     //MARK: - Actions
     @IBAction func checkoutBtnTapped(_ sender: Any) {
+        if User.currentUser()!.onBoard {
+            //proceed with purchase
+            tempAddToBaskedItemIdFunc()
+            addItemsToPurchaseHistory(self.itemsInCartIds)
+            
+            
+            self.hud.textLabel.text = "Congratulations, you bought \(itemsInCartIds.count) items, for \(calculateTotalBasketSum())"
+            self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 3.0)
+            
+            emptyBasket()
+            
+        } else {
+            self.hud.textLabel.text = "Please enter full profile informaation"
+            self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
+            self.hud.show(in: self.view)
+            self.hud.dismiss(afterDelay: 2.0)
+        }
     }
     
     //MARK: - Load Basket
@@ -67,6 +86,11 @@ class BasketVC: UIViewController {
     }
     
     //Helper Functions
+    func tempAddToBaskedItemIdFunc() {
+        for item in allItems {
+            itemsInCartIds.append(item.id)
+        }
+    }
     private func updateTotalLabels(_ isEmpty: Bool) {
         if isEmpty {
             itemsInCartLbl.text = "0"
@@ -85,6 +109,30 @@ class BasketVC: UIViewController {
             totalSum += item.price
         }
         return convertToCurrency(totalSum)
+    }
+    
+    private func emptyBasket() {
+        itemsInCartIds.removeAll()
+        allItems.removeAll()
+        basket!.itemIds = []
+        
+        updateBasketInFirestore(basket!, withValues: [cITEMSID : basket!.itemIds]) { (error) in
+            if error != nil {
+                print("Error updating basket ", error!.localizedDescription)
+            }
+            self.getBasketItems()
+        }
+    }
+    
+    private func addItemsToPurchaseHistory(_ itemIds: [String]) {
+        if User.currentUser() != nil {
+            let newItemIds = User.currentUser()!.purchasedItemIds + itemIds
+            updateCurrentUserInFirestore(withValues: [cPURCHASEDITEMIDS : newItemIds]) { (error) in
+                if error != nil {
+                    print("Error adding purchased items ", error!.localizedDescription)
+                }
+            }
+        }
     }
     
     //MARK: - Navigation
