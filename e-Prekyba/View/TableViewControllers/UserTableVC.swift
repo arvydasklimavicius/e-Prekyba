@@ -27,9 +27,9 @@ class UserTableVC: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        
-        checkLoginStatus()
         checkOnboardingStatus()
+        checkLoginStatus()
+      
     }
 
     // MARK: - Table view data source

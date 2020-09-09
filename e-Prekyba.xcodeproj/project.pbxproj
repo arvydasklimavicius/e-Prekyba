@@ -20,6 +20,7 @@
 		CE3CC15A2503E75300851205 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC1592503E75300851205 /* RoundedButton.swift */; };
 		CE3CC15C250668DE00851205 /* RegistrationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC15B250668DE00851205 /* RegistrationVC.swift */; };
 		CE3CC15E2506886400851205 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC15D2506886400851205 /* EditProfileVC.swift */; };
+		CE3CC1602509021E00851205 /* PurchaseHistoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3CC15F2509021E00851205 /* PurchaseHistoryTVC.swift */; };
 		CE66171324D306A8009F0455 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */; };
 		CE66171524D307E0009F0455 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */; };
 		CE66171724D309FF009F0455 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CE66171624D309FF009F0455 /* GoogleService-Info.plist */; };
@@ -55,6 +56,7 @@
 		CE3CC1592503E75300851205 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CE3CC15B250668DE00851205 /* RegistrationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationVC.swift; sourceTree = "<group>"; };
 		CE3CC15D2506886400851205 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		CE3CC15F2509021E00851205 /* PurchaseHistoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseHistoryTVC.swift; sourceTree = "<group>"; };
 		CE66171224D306A8009F0455 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
 		CE66171424D307E0009F0455 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		CE66171624D309FF009F0455 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -140,6 +142,16 @@
 			path = "e-Prekyba";
 			sourceTree = "<group>";
 		};
+		CE3CC1612509022900851205 /* TableViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CE3CC1552503CA2400851205 /* UserTableVC.swift */,
+				CE66172224D99D19009F0455 /* ItemsTVC.swift */,
+				CE3CC15F2509021E00851205 /* PurchaseHistoryTVC.swift */,
+			);
+			path = TableViewControllers;
+			sourceTree = "<group>";
+		};
 		CE66171A24D324F1009F0455 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -151,15 +163,14 @@
 		CE66171B24D324FE009F0455 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				CE66172224D99D19009F0455 /* ItemsTVC.swift */,
 				CE66172624D9B730009F0455 /* AddItemVC.swift */,
 				CE7D3D0324F569B400CDACF4 /* ItemVC.swift */,
 				CE2A282024F916040097D82F /* BasketVC.swift */,
 				CE2A282224FEA9FE0097D82F /* LoginVC.swift */,
-				CE3CC1552503CA2400851205 /* UserTableVC.swift */,
-				CE3CC1592503E75300851205 /* RoundedButton.swift */,
 				CE3CC15B250668DE00851205 /* RegistrationVC.swift */,
 				CE3CC15D2506886400851205 /* EditProfileVC.swift */,
+				CE3CC1592503E75300851205 /* RoundedButton.swift */,
+				CE3CC1612509022900851205 /* TableViewControllers */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -325,6 +336,7 @@
 				CE66171E24D32597009F0455 /* Category.swift in Sources */,
 				CE3CC15C250668DE00851205 /* RegistrationVC.swift in Sources */,
 				CE3CC1562503CA2400851205 /* UserTableVC.swift in Sources */,
+				CE3CC1602509021E00851205 /* PurchaseHistoryTVC.swift in Sources */,
 				CE2D6AF224D2EB3D0018E1BD /* AppDelegate.swift in Sources */,
 				CE2A281F24F7F92F0097D82F /* Basket.swift in Sources */,
 				CE7D3D0024EEAD6400CDACF4 /* ItemTVCell.swift in Sources */,
