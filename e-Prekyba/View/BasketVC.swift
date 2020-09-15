@@ -59,10 +59,7 @@ class BasketVC: UIViewController {
     @IBAction func checkoutBtnTapped(_ sender: Any) {
         if User.currentUser()!.onBoard {
             //proceed with purchase
-            
-            
-            
-            
+            payButtonTapped()
         } else {
             self.hud.textLabel.text = "Please enter full profile informaation"
             self.hud.indicatorView = JGProgressHUDErrorIndicatorView()
@@ -251,11 +248,14 @@ extension BasketVC: UITableViewDelegate, UITableViewDataSource {
 
 extension BasketVC: PayPalPaymentDelegate {
     func payPalPaymentDidCancel(_ paymentViewController: PayPalPaymentViewController) {
-        <#code#>
+        paymentViewController.dismiss(animated: true, completion: nil)
     }
     
     func payPalPaymentViewController(_ paymentViewController: PayPalPaymentViewController, didComplete completedPayment: PayPalPayment) {
-        <#code#>
+        paymentViewController.dismiss(animated: true) {
+            self.addItemsToPurchaseHistory(self.itemsInCartIds)
+            self.emptyBasket()
+        }
     }
     
     
