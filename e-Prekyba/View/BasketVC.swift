@@ -59,16 +59,9 @@ class BasketVC: UIViewController {
     @IBAction func checkoutBtnTapped(_ sender: Any) {
         if User.currentUser()!.onBoard {
             //proceed with purchase
-            tempAddToBaskedItemIdFunc()
-            addItemsToPurchaseHistory(self.itemsInCartIds)
             
             
-            self.hud.textLabel.text = "Congratulations, you bought \(itemsInCartIds.count) items, for \(calculateTotalBasketSum())"
-            self.hud.indicatorView = JGProgressHUDSuccessIndicatorView()
-            self.hud.show(in: self.view)
-            self.hud.dismiss(afterDelay: 3.0)
             
-            emptyBasket()
             
         } else {
             self.hud.textLabel.text = "Please enter full profile informaation"
@@ -97,11 +90,7 @@ class BasketVC: UIViewController {
     }
     
     //Helper Functions
-    func tempAddToBaskedItemIdFunc() {
-        for item in allItems {
-            itemsInCartIds.append(item.id)
-        }
-    }
+    
     private func updateTotalLabels(_ isEmpty: Bool) {
         if isEmpty {
             itemsInCartLbl.text = "0"
@@ -187,6 +176,34 @@ class BasketVC: UIViewController {
         payPalconfig.languageOrLocale = Locale.preferredLanguages[0] //device language
         payPalconfig.payPalShippingAddressOption = .both
     }
+    
+    private func payButtonTapped() {
+        var itemsToBuy: [PayPalItem] = []
+        
+        for item in allItems {
+            let tempItem = PayPalItem(name: item.name, withQuantity: 1, withPrice: NSDecimalNumber(value: item.price), withCurrency: "EUR", withSku: nil)
+            itemsInCartIds.append(item.id)
+            itemsToBuy.append(tempItem)
+        }
+        let subTotal = PayPalItem.totalPrice(forItems: itemsToBuy)
+        
+        //optional figures
+        let tax = NSDecimalNumber(string: "2.00")
+        let shippingCost = NSDecimalNumber(string: "5.00")
+        let paymentDetails = PayPalPaymentDetails(subtotal: subTotal, withShipping: shippingCost, withTax: tax)
+        let total = subTotal.adding(shippingCost).adding(tax)
+        let payment = PayPalPayment(amount: total, currencyCode: "EUR", shortDescription: "Congrats!", intent: .sale)
+        payment.items = itemsToBuy
+        payment.paymentDetails = paymentDetails
+        
+        if payment.processable {
+            let paymentViewController = PayPalPaymentViewController(payment: payment, configuration: payPalconfig, delegate: self)
+            present(paymentViewController!, animated: true, completion: nil)
+        } else {
+            print("Payment not processable")
+        }
+        
+    }
 
 }
 
@@ -227,6 +244,18 @@ extension BasketVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         showItemView(withItem: allItems[indexPath.row])
+    }
+    
+    
+}
+
+extension BasketVC: PayPalPaymentDelegate {
+    func payPalPaymentDidCancel(_ paymentViewController: PayPalPaymentViewController) {
+        <#code#>
+    }
+    
+    func payPalPaymentViewController(_ paymentViewController: PayPalPaymentViewController, didComplete completedPayment: PayPalPayment) {
+        <#code#>
     }
     
     
