@@ -17,21 +17,32 @@ class BasketVC: UIViewController {
     @IBOutlet weak var basketTableView: UITableView!
     @IBOutlet weak var checkoutBtn: UIButton!
     
-    //MARK: - VAriables
+    //MARK: - Variables
     var basket: Basket? //optional because we don't know if user has basket
     var allItems: [Item] = []
     var itemsInCartIds: [String] = []
     
     let hud = JGProgressHUD(style: .dark)
     
+    var environment: String = PayPalEnvironmentNoNetwork {
+        willSet (newEnvironment) {
+            if (newEnvironment != environment) {
+                PayPalMobile.preconnect(withEnvironment: newEnvironment)
+            }
+        }
+    }
+    
+    var payPalconfig = PayPalConfiguration()
+    
     
     //MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        checkoutBtn.layer.cornerRadius = 8
+        setupPayPal()
         basketTableView.delegate = self
         basketTableView.dataSource = self
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -165,6 +176,16 @@ class BasketVC: UIViewController {
                 return
             }
         }
+    }
+    
+    //MARK: - Paypal Setup
+    private func setupPayPal() {
+        payPalconfig.acceptCreditCards = false
+        payPalconfig.merchantName = "e - Prekyba"
+        payPalconfig.merchantPrivacyPolicyURL = URL(string: "https://www.paypal.com/lt/webapps/mpp/ua/privacy-full")
+        payPalconfig.merchantUserAgreementURL = URL(string: "https://www.paypal.com/lt/webapps/mpp/ua/useragreement-full")
+        payPalconfig.languageOrLocale = Locale.preferredLanguages[0] //device language
+        payPalconfig.payPalShippingAddressOption = .both
     }
 
 }
