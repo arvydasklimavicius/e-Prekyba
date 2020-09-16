@@ -158,6 +158,7 @@ PODS:
     - abseil/base/base_internal
     - abseil/base/config
     - abseil/meta/type_traits
+  - Alamofire (4.9.1)
   - BoringSSL-GRPC (0.0.3):
     - BoringSSL-GRPC/Implementation (= 0.0.3)
     - BoringSSL-GRPC/Interface (= 0.0.3)
@@ -296,8 +297,10 @@ PODS:
     - CardIO (~> 5.4.1)
   - PayPal-iOS-SDK/Core (2.18.1)
   - PromisesObjC (1.2.8)
+  - Stripe (18.4.0)
 
 DEPENDENCIES:
+  - Alamofire
   - EmptyDataSet-Swift
   - Firebase/Auth
   - Firebase/Core
@@ -308,10 +311,12 @@ DEPENDENCIES:
   - JGProgressHUD
   - NVActivityIndicatorView/AppExtension
   - PayPal-iOS-SDK
+  - Stripe
 
 SPEC REPOS:
   trunk:
     - abseil
+    - Alamofire
     - BoringSSL-GRPC
     - CardIO
     - EmptyDataSet-Swift
@@ -341,9 +346,11 @@ SPEC REPOS:
     - NVActivityIndicatorView
     - PayPal-iOS-SDK
     - PromisesObjC
+    - Stripe
 
 SPEC CHECKSUMS:
   abseil: 18063d773f5366ff8736a050fe035a28f635fd27
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
   BoringSSL-GRPC: db8764df3204ccea016e1c8dd15d9a9ad63ff318
   CardIO: 56983b39b62f495fc6dae9ad7cf875143df06443
   EmptyDataSet-Swift: eb382c0c87a2d9c678077385a595cec52da38171
@@ -373,7 +380,8 @@ SPEC CHECKSUMS:
   NVActivityIndicatorView: d24b7ebcf80af5dcd994adb650e2b6c93379270f
   PayPal-iOS-SDK: 70d56697aef502c130b9840e31dea5c6b8a350e1
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
+  Stripe: fa837c60f0644b488c994024ce7d9b001ea4e97c
 
-PODFILE CHECKSUM: 4d49a09e539dd87d38afe49d1f7d5c39365f9e00
+PODFILE CHECKSUM: 77be293f34d2711e4847c830e9520fd19d55fb49
 
 COCOAPODS: 1.8.4
