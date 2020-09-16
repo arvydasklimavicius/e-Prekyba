@@ -8,6 +8,14 @@
 
 import Foundation
 
+//MARK: - Stripe Constants
+enum Constants {
+    static let publishKey = "pk_test_51HRzK8BXRhlVERrwEekYX0bFJWserzq090b0R831eo4M87ZOINmIPaIExZvnTYrwlXedf0FLCdj1hyNUXe5jJQ0T00lS9QpgvV"
+    static let baseURLString = ""
+    static let defaultCurrency = "EUR"
+    static let defaultDescription = "Purchase from e-Prekyba"
+}
+
 //MARK: - ID's and Keys
 public let cFILEREFERENCE = "gs://e-prekyba-d6460.appspot.com"
 

@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import Stripe
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        initializePayPal()
+        initializeStripe()
         return true
     }
 
@@ -35,9 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
     
-    //MARK: - initialize PayPal
-    func initializePayPal() {
-        PayPalMobile.initializeWithClientIds(forEnvironments: [PayPalEnvironmentProduction : "AQbvSsj6c6bkwsQotIWFQAWXYAt-bOnQwRtQQsJXat_5GqrIX49h2OpVNoJKMuT1bgHXCbg7ZOHovN5p", PayPalEnvironmentSandbox: "sb-6cwwi3221823@business.example.com"])
+    //MARK: - initialize Stripe
+    func initializeStripe() {
+        STPPaymentConfiguration.shared().publishableKey = Constants.publishKey
     }
 
 
